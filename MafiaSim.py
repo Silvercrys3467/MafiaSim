@@ -1,12 +1,13 @@
 from enum import Enum
 import random
 
-Starting_Mafia = 10
-Starting_Town = 90
+Starting_Mafia = 2
+Starting_Town = 10
 NumberOfGames = 10000
 NumberOfTownWins = 0
 Mafia_lynched = 0
 Town_lynched = 0
+Accuracy = .45
 
 class GameState(Enum):
     ONGOING = 1
@@ -36,7 +37,7 @@ for x in range(0, NumberOfGames):
     while Game_State == GameState.ONGOING:
         # Day Phase
         rand = random.random()
-        mafiaLynchOdds = NumberOfMafia/(NumberOfTown+NumberOfMafia)
+        mafiaLynchOdds = Accuracy ##NumberOfMafia/(NumberOfTown+NumberOfMafia)
         if NumberOfMafia + 2 == NumberOfTown:
             # No Lynch in Mylo
             pass
