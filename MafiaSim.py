@@ -37,7 +37,7 @@ for x in range(0, NumberOfGames):
         # Day Phase
         rand = random.random()
         mafiaLynchOdds = NumberOfMafia/(NumberOfTown+NumberOfMafia)
-        if rand >= mafiaLynchOdds:
+        if rand > mafiaLynchOdds:
             # Town got lynched
             NumberOfTown -= 1
             Town_lynched += 1
